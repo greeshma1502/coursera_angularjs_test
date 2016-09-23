@@ -1,7 +1,10 @@
 (function(){
 'use strict';
 
-  angular.module('lunchCalculator', []).controller('LunchCheckController', function($scope){
+  angular.module('lunchCalculator', []).controller('LunchCheckController', LunchCheckController)
+    LunchCheckController.$inject = ['$scope']
+
+    function LunchCheckController ($scope){
       $scope.items = "";
       $scope.output = "";
 
@@ -21,5 +24,5 @@
           }
           console.log(arrayOfItems.length);
       };
-  });
+  }
 })();
